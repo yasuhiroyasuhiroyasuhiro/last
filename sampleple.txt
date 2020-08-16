@@ -1,0 +1,199 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <random>
+#include <algorithm>
+using namespace std;
+
+class MyMonster{
+public:
+	string Name;
+
+
+	void showMy();
+
+};
+
+
+void showMy() {
+
+
+	MyMonster Pikachu;
+	Pikachu.Name = "Pikachu";
+
+
+	MyMonster Jibanyan;
+	Jibanyan.Name = "Jibanyan";
+
+
+	MyMonster Doraemon;
+	Doraemon.Name = "Doraemon";
+
+
+	MyMonster Ojarumaru;
+	Ojarumaru.Name = "Ojarumaru";
+	
+
+}
+
+class EnemysMonster {
+public:
+	string Name;
+	int Type;
+	int To1attack;
+	int To2attack;
+	int To3attack;
+	int To4attack;
+
+	void showEnemys();
+
+};
+
+void showEnemys() {
+
+
+	EnemysMonster Nyanchu;
+	Nyanchu.Name = "Nyanchu";
+
+
+	EnemysMonster MickeyMouse;
+	MickeyMouse.Name = "MickeyMouse";
+
+
+	EnemysMonster Moomin;
+	Moomin.Name = "Moomin";
+	
+
+	EnemysMonster Snoopy;
+	Snoopy.Name = "Snoopy";
+
+
+}
+
+int main() {
+   class MyMonster;
+   class EnemysMonster;
+
+	cout << "敵にバトルを申し込まれた!\n";
+
+	cout << "自分のモンスターは\n";
+
+	vector<int> v1(1);
+	
+
+	random_device engine;
+	uniform_int_distribution<unsigned> dist1(1, 4);
+	for (int i = 0; i < 1; ++i) {
+
+		v1.push_back(dist1(engine));
+
+		cout << dist1(engine) << "番なので\n";
+	
+
+	auto begin = v1.cbegin();
+	auto end = v1.cend();
+
+
+	int target1 = 1;
+	auto pos = find(begin, end, target1);
+	if (pos == end);
+	else cout << "Pikachu\n";
+
+
+	int target2 = 2;
+	auto pos2 = find(begin, end, target2);
+	if (pos2 == end);
+	else cout << "jibanyan\n";
+	
+
+	int target3 = 3;
+	auto pos3 = find(begin, end, target3);
+	if (pos3 == end);
+	else cout << "Doraemon\n";
+
+
+	int target4 = 4;
+	auto pos4 = find(begin, end, target4);
+	if (pos4 == end);
+	else cout << "Ojarumaru";
+	
+    }
+
+
+	cout << "に、対戦相手のモンスターは\n";
+
+
+    vector<int> v2(1);
+   
+
+	uniform_int_distribution<unsigned> dist2(5, 8);
+	for (int i = 0; i < 1; ++i) {
+
+		v2.push_back(dist2(engine));
+
+		cout << dist2(engine) << "番なので\n";
+
+		auto begin2 = v2.cbegin();
+		auto end2 = v2.cend();
+
+		int target5 = 5;
+		auto pos5 = find(begin2, end2, target5);
+		if (pos5 == end2);
+		else cout << "Nyanchu\n";
+
+
+		int target6 = 6;
+		auto pos6 = find(begin2, end2, target6);
+		if (pos6 == end2);
+		else cout << "MickeyMouse\n";
+
+
+		int target7 = 7;
+		auto pos7 = find(begin2, end2, target7);
+		if (pos7 == end2);
+		else cout << "Moomin\n";
+
+
+		int target8 = 8;
+		auto pos8 = find(begin2, end2, target8);
+		if (pos8 == end2);
+		else cout << "Snoopy\n";
+
+	}
+	cout << "と決まりました！！\n";
+
+	cout << "～～～～～Let's battle!!!～～～～～\n";
+
+
+
+
+	vector<int> A1ATK(0);
+	vector<int> B1ATK(0);
+
+	cout << "自分の攻撃の値は\n";
+
+	
+	uniform_int_distribution<unsigned> distA1(1, 50);
+	for (int A1 = 0; A1 < 1; ++A1) {
+
+		A1ATK.push_back(distA1(engine));
+
+		cout << distA1(engine) << "と決まりました!\n";
+	}
+
+
+	cout << "相手の攻撃の値は\n";
+
+	uniform_int_distribution<unsigned> distB1(1, 50);
+	for (int B1 = 0; B1 < 1; ++B1) {
+
+		B1ATK.push_back(distB1(engine));
+
+		cout << distB1(engine) << "と決まりました!\n";
+	}
+
+	if (A1ATK[0] > B1ATK[0]) cout << "自分の勝ち!!\n";
+	else cout << "相手の勝ち…ぴえん…\n";
+
+	
+}
